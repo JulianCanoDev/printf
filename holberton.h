@@ -7,16 +7,14 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-typedef struct validTypes
+/* typedef struct validTypes
 {
 	char *valid;
 	char *(f)();
-} v_types;
+} v_types; */
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int _strlen(char *s);
-char *_memcpy(char *dest, char *src, unsigned int n);
-void _puts(char *str);
+void found_char (int c);
 
 #endif
