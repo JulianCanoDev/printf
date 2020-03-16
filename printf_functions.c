@@ -13,5 +13,5 @@
  */
 void found_char(int c)
 {
-	(_putchar(c));
+	_putchar(_putchar(c));
 }
