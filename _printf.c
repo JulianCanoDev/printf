@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * _printf - Our own printf function.
  * @format: Undefined arguments to print
@@ -7,35 +6,31 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, j;
-	char *strings;
-	va_list ap;
+	int i = 0;
 
-	i = j = 0;
-	va_start(ap, format);
-	while (format[i] != '\0')
+	va_list arg;
+	va_start(arg, format);
+
+	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1] == 'c')
+		if (format[i] == '%')
 		{
-			_putchar(va_arg(ap, int));
-			i++;
-		}
-		else if (format[i] == '%' && format[i + 1] == 's')
-		{
-			strings = va_arg(ap, char *);
-			for (j = 0; strings[j] != '\0'; j++)
-				_putchar(strings[j]);
-			i++;
-		}
-		else if (format[i] == '%' && format[i + 1] == '%')
-		{
-			_putchar('%');
-			i++;
+			if (get_fn(format, i + 1) != NULL)
+			{
+				(get_fn(format, i + 1))(arg);
+				i++;
+			}
 		}
 		else
+		{
 			_putchar(format[i]);
+		}
 		i++;
 	}
-	va_end(ap);
+	
+	va_end(arg);
 	return (0);
 }
+
+
+
