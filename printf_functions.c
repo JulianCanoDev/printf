@@ -1,5 +1,20 @@
 #include "holberton.h"
 /**
+ * _printpercent - char %
+ * @s: argument char
+ * Return: Void
+ */
+
+int _printpercent(char *s)
+{
+	s++;
+
+	_putchar('%');
+
+	return (1);
+}
+
+/**
  * _printchar - char
  * @args: arguments
  * Return: Void
@@ -22,38 +37,26 @@ int _printchar(va_list args)
 int _printstr(va_list args)
 {
 	char *s;
-	int i;
+	int i, l;
 
 	s = va_arg(args, char *);
 
 	if (s == NULL)
 	{
-		i = 6;
-		write(1, "(null)", 6);
+		l = 6;
+		s = "(null)";
 
-		return (i);
+		for (i = 0; i < l; i++)
+			_putchar(*(s + i));
 	}
-
-	for (i = 0; s[i] != '\0'; i++)
+	else
 	{
+		for (i = 0; s[i] != '\0'; i++)
+			;
+		l = i;
+		for (i = 0; i < l; i++)
+			_putchar(*(s + 1));
+
 	}
-	write(1, s, i);
-
-	return (i);
-}
-/**
-  * _printpercent - passes a % sign through
-  * @args: va_list
-  * Return: percent sign as a character string
-  */
-int _printpercent(va_list args)
-{
-	char str;
-
-	str = (char) va_arg(args, int);
-
-	str = '%';
-	_putchar(str);
-
-	return (1);
+	return (l);
 }
