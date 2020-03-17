@@ -13,6 +13,7 @@ int _printchar(va_list arg);
 int _printdecimal(va_list arg);
 int _printstr(va_list arg);
 int _printint(va_list arg);
+char *_printpercent(void);
 
 /**
  * struct check_pf - base verification de function
