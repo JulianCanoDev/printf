@@ -4,3 +4,5 @@
 *.swp
 *.out
 *_exp.c
+main.c
+main.exp.c
