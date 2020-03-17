@@ -45,10 +45,12 @@ int _printstr(va_list args)
   * _printpercent - passes a % sign through
   * Return: percent sign as a character string
   */
-char *_printpercent(void)
+int _printpercent(va_list args)
 {
-	char *str;
+	char str;
 
-	string = "%";
-	return (str);
+	str = (char) va_arg(args, int);
+	_putchar('%');
+
+	return (1);
 }

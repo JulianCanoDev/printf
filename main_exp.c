@@ -4,12 +4,15 @@ int main(void)
 {
 	char c;
     char *s;
-    int n = 10;
+    int n;
 
 	c = 'A';
     s = "camilo";
     n = 10;
 
-	_printf("Hello %c -- %s --  %i/n", c, s, n );
+	_printf("Hello %c -- %s --  \n", c, s );
+
+    _printf("percent: %% \n");
+
 	return (0);
 }

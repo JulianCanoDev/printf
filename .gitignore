@@ -3,3 +3,4 @@
 *.md~
 *.swp
 *.out
+*_exp.c

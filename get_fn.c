@@ -13,6 +13,7 @@ int (*get_fn(const char *charac, int pos))(va_list)
 	c_pf type[] = {
 		{ "c", _printchar },
 		{ "s", _printstr },
+		{ "%", _printpercent}
 	};
 
 	len_type = sizeof(type) / sizeof(c_pf);
