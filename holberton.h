@@ -15,7 +15,7 @@ int _printstr(va_list arg);
 int _printint(va_list arg);
 
 /**
- * struct op - Struct op
+ * struct check_pf - base verification de function
  *
  * @op: The operator
  * @f: The function associated
