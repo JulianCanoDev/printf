@@ -50,7 +50,9 @@ int _printpercent(va_list args)
 	char str;
 
 	str = (char) va_arg(args, int);
-	_putchar('%');
+
+	str = '%';
+	_putchar(str);
 
 	return (1);
 }
