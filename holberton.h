@@ -1,6 +1,8 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
+#define BUFF_SIZE 1025
+
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
