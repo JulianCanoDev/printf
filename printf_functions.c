@@ -43,6 +43,7 @@ int _printstr(va_list args)
 }
 /**
   * _printpercent - passes a % sign through
+  * @args: va_list
   * Return: percent sign as a character string
   */
 int _printpercent(va_list args)

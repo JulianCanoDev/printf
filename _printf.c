@@ -7,8 +7,8 @@
 int _printf(const char *format, ...)
 {
 	int i = 0;
-
 	va_list arg;
+
 	va_start(arg, format);
 
 	while (format != NULL && format[i] != '\0')
