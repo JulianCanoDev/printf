@@ -1,11 +1,10 @@
 #include "holberton.h"
 /**
- * number_p - print numbers
+ * number_p_u - print numbers
  * @n: int for print
  * Return: int
  */
-
-int number_p_u( unsigned int n)
+int number_p_u(unsigned int n)
 {
 
 	unsigned int get_num, m, l = 1, leng = 0;
@@ -24,15 +23,14 @@ int number_p_u( unsigned int n)
 		l = l / 10;
 		leng++;
 	}
-	
-	_putchar(n % 10 + '0');
+	 _putchar(n % 10 + '0');
 	leng++;
 
 	return (leng);
 }
 
 /**
- * _printdecimal - print decimals numbers
+ * _printu - print decimals numbers
  * @args: arguments
  * Return: int
  */
@@ -40,7 +38,7 @@ int _printu(va_list args)
 {
 
 	unsigned int num;
-    int len;
+	int len;
 
 	num = va_arg(args, unsigned int);
 
@@ -49,32 +47,34 @@ int _printu(va_list args)
 	return (len);
 }
 
+/**
+ * _printo - printo
+ * @args: good
+ * Return: value
+ */
 int _printo(va_list args)
 {
-    int i = 0;
-    int j = 0; 
-    unsigned int decimal = va_arg(args, int);
-    long octal[50];
+	int i = 0;
+	int j = 0;
+	unsigned int decimal = va_arg(args, int);
+	long octal[50];
 
-    if (decimal == 0)
-    {
-        number_p (0);
-        return (1);
-    }
-    
-    while (decimal > 0)
-    {
-        octal[i] = decimal % 8;
-        decimal = decimal / 8;
-        i++;
-    }
+	if (decimal == 0)
+	{
+	number_p(0);
+	return (1);
+	}
+	while (decimal > 0)
+	{
+	octal[i] = decimal % 8;
+	decimal = decimal / 8;
+	i++;
+	}
 
-    for (j = i - 1  ; j >= 0; j--)
-    {
-        number_p(octal[j]);
-    }
-
-    return (i);
-
+	for (j = i - 1  ; j >= 0; j--)
+	{
+		number_p(octal[j]);
+	}
+	return (i);
 }
 
