@@ -1,6 +1,6 @@
-# _printf
+<h1 style="color:#EB0045"> _printf </h1>
 
-A re-creation of the printf function in C.
+A re-creation of the printf function in C in 5 days.
 
 ## Requirements for this project
 
