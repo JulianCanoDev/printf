@@ -15,7 +15,9 @@ int (*get_fn(const char *charac, int pos))(va_list)
 		{ "s", _printstr },
 		{ "%", _printpercent },
 		{ "d", _printint},
-		{ "i", _printdecimal}
+		{ "i", _printdecimal},
+		{ "u", _printu },
+		{ "o", _printo },
 	};
 
 	len_type = sizeof(type) / sizeof(c_pf);
