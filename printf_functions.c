@@ -52,10 +52,8 @@ int _printstr(va_list args)
 	}
 	else
 	{
-		for (i = 0; s[i] != '\0'; i++)
-			;
-		l = i;
-		for (i = 0; i < l; i++)
-			_putchar(*(s + 1));
+		for (i = 0; s[i]; i++)
+			_putchar(s[i]);
+		return (i);
 	}
 }
