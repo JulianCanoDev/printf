@@ -48,6 +48,7 @@ int _printstr(va_list args)
 
 		for (i = 0; i < l; i++)
 			_putchar(*(s + i));
+		return (l);
 	}
 	else
 	{
@@ -56,7 +57,5 @@ int _printstr(va_list args)
 		l = i;
 		for (i = 0; i < l; i++)
 			_putchar(*(s + 1));
-
 	}
-	return (l);
 }
